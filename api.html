@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="api.css">
+    <!-- axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <div class="container p-0">
+        <h1 class="text-center">WEATHER FORECAST</h1>
+        <p id="error" class="text-danger bg-light"></p>
+        <div class="number">
+            <label class="d-block" for="location">Please enter a location</label>
+            <input class="container-fluid" type="text" name="location" id="location" placeholder="eg: lagos">
+
+            <label class="d-block mt-3" for="duration">Please enter forecast duration (1 - 3 days)</label>
+            <input class="container-fluid" type="number" min="1" max="3" name="duration" id="duration" placeholder="eg: 2">
+        </div>
+        <div class="spinner_con text-center mt-3">
+            <button class="btn btn-danger" id="check">Check</button>
+            <span class="spinner ml-4" id="spinner"></span>
+        </div>
+        <div class="result container mt-2">
+            <div class="current">
+                <h2 class="text-center">Current</h2>
+                <p class="" id="place"></p>
+                <p class="" id="time"></p>
+                <p class="" id="condition"></p>
+                <p class="" id="temperature"></p>
+                <p class="" id="last_updated"></p>
+            </div>
+            <div id="forecast_result"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="api.js"></script>
+    
+</body>
+</html>

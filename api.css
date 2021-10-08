@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  background-image: url("./animated.gif");
+  /* background-image: url("./sky.gif"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+}
+.result {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+label {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+}
+.spinner_con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    border: 3px solid rgb(1, 58, 1);
+    border-bottom: transparent;
+    border-radius: 50%;
+    padding: 15px;
+    margin-left: 10px;
+    display: none;
+}
+
+@keyframes spinner {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.forecast {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
